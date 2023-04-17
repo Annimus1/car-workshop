@@ -1,0 +1,126 @@
+:root{
+  --max-width: 1230px;
+  --min-width: 320px;
+  --accent-color: #9A208C;
+}
+
+/* General */
+
+*{ box-sizing: border-box;}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+
+  background-color: black;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  color: white; 
+}
+
+header, article, footer{
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: var(--max-width);
+}
+
+/* container */
+.container{
+  height: 100vh;
+  width: 100%;
+  min-width: var(--min-width);
+
+  background-image: url("https://cdn.pixabay.com/photo/2018/06/28/22/14/car-3504910_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  transition: background-image .7s ease-in-out;
+}
+
+/* Header */
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo{
+  font-size: 28px;
+}
+
+.menu{
+  display: flex;
+}
+
+.item{
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.item-h:hover{
+  background-color: silver;
+}
+
+.book-appointment{
+  
+  padding: .5rem 2rem ;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  background: var(--accent-color);
+}
+
+/* Content */
+.content{
+  display: flex;
+  flex-grow: 1;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1 {
+  font-size: 64px;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
+
+/* Footer */
+.footer-wrapper{
+  width: 100%;
+  background-color: black;
+}
+
+footer{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3{
+  color: var(--accent-color);
+  padding: 0;
+}
+
+footer .text{
+  padding: 0;
+  font-size: 12px;
+}
