@@ -34,7 +34,7 @@ header, article, footer{
 .container{
   height: 100vh;
   width: 100%;
-  min-width: var(--min-width);
+  /* min-width: var(--min-width); */
 
   background-image: url("https://cdn.pixabay.com/photo/2018/06/28/22/14/car-3504910_1280.jpg");
   background-size: cover;
@@ -51,15 +51,19 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem .5rem;
 }
 
 .logo{
   font-size: 28px;
 }
 
-.menu{
+.menu-inner{
   display: flex;
+}
+.menu{ 
+  display: flex;
+  flex-direction: row; 
 }
 
 .item{
@@ -124,3 +128,46 @@ footer .text{
   padding: 0;
   font-size: 12px;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+  header{
+    padding: 1rem;
+  }
+
+  .logo{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-grow: 1;
+    flex-direction: column;
+  }
+  .menu-inner{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  #hide{
+    display: none;
+  }
+  .book-appointment{
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+
+  .footer-wrapper{
+    padding: .2rem;
+  }
+}
+
+
